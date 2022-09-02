@@ -1,0 +1,120 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  button {
+    cursor: pointer;
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  .next-player-wrapper,
+  .winner-wrapper,
+  .board-size-input-wrapper,
+  .reset-wrapper,
+  .celebrating-img-wrapper {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .next-player-wrapper,
+  .winner-wrapper {
+    span {
+      color: white;
+      height: 25px;
+      display: inline-block;
+      text-align: center;
+      padding: 4px;
+    }
+  }
+
+  .next-player-wrapper {
+    span {
+      width: 25px;
+    }
+  }
+
+  .winner-wrapper {
+    span {
+      background: black;
+      width: 65px;
+    }
+  }
+
+  .celebrating-img-wrapper {
+    width: 120px;
+    height: 120px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .board-size-wrapper {
+    .error-message {
+      color: red;
+      text-align: center;
+      margin: 15px;
+    }
+  }
+
+  .reset-wrapper {
+    button {
+      font-size: 16px;
+      color: white;
+      background: darkgoldenrod;
+      height: 40px;
+      width: 85px;
+      border: none;
+      outline: none;
+      box-shadow: 2px 3px 5px #604709;
+    }
+  }
+
+  .board-wrapper {
+    .row {
+      display: flex;
+
+      .cell {
+        &.large {
+          width: 75px;
+          height: 75px;
+        }
+
+        &.medium {
+          width: 55px;
+          height: 55px;
+        }
+
+        &.small {
+          width: 40px;
+          height: 40px;
+        }
+
+        &.x-small {
+          width: 34px;
+          height: 34px;
+        }
+
+        &.player-one,
+        &.player-two {
+          color: white;
+          font-size: 20px;
+          border: none;
+          outline: none;
+        }
+      }
+    }
+  }
+
+  .player-one {
+    background: crimson;
+  }
+
+  .player-two {
+    background: darkcyan;
+  }
+}
